@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #342b38e2;
+    font-size: 1rem;
+    transition: all 0.4s ease-in-out;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4
+  {
+    font-size: 2rem;
+}
+
+.section-p {
+    padding: 5rem 10rem;
+}
+
+.t-shadow {
+    text-shadow: 0px 0px 7px black;
+}
+
+
+#hero {
+    background-image: url("images/bangkok.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 800;
+    height: 80vh;
+}
+
+#hero h3 {
+    font-size: 4rem;
+}
+
+#hero p {
+    font-size: 2.25rem;
+}
+
+#hero span {
+    color: #8fea9ce2;
+}
+
+#hero .btn-container {
+    margin-top: 2rem;
+}
+
+#hero .btn-container button {
+    padding: 1rem 1.5rem;
+    font-size: inherit;
+    font-weight: 700;
+    border-radius: 13px;
+    background: transparent;
+    color: #8fea9ce2;
+    border: 5px solid #8fea9ce2;
+    transition: all 0.4s ease-in-out;
+}
+
+#hero .btn-container button:hover {
+    background-color: white;
+}
+
+.section {
+    height: 70vh;
+}
+
+#activities {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+#activities .act-box {
+    background-color: rgba(137, 128, 128, 0.726);
+    padding: 1.5rem 3rem;
+    border-radius: 13px;
+    width: 350px;
+    border-bottom: 8px solid #4ea25ae2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#activities .act-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: all 0.4s ease-in-out;
+}
+
+#activities .act-img:hover {
+    filter: grayscale(0);
+}
+
+#activities .act-box .details h4 {
+    color: #8fea9ce2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 800;
+}
+
+#activities .act-box .details p {
+    font-weight: 600;
+}
+
+#card-section {
+    background-color: #355a3ac7; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.card {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgba(137, 128, 128, 0.726);
+    color: #52b69a;
+    border-bottom: 6px solid #52b788;
+    border-radius: 7px;
+    letter-spacing: 0.05rem;
+    font-weight: 800;
+    box-shadow: 1px 2px 15px rgba(0,0,0,0.3);
+}
+
+.img-container {
+    display: grid;
+    position: relative;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    position: relative;
+}
+
+.image::after {
+    content: "";
+    background-color: #3b7750;
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    width: 150px;
+    height: 150px;
+    border-radius: 13px;
+}
+
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    display: block;
+    z-index: 999;
+}
+
+.details {
+    width: 300px;
+    padding: 1rem;
+}
+
+.card-title {
+    position: relative;
+    font-size: 1.25rem;
+    color: #1ec8a0;
+    margin-bottom: 0.2rem;
+}
+
+.details p {
+    margin-bottom: 0.75rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icons a {
+    padding: 0 0.5rem;
+    color: #469d89;
+    transition: all 0.4s ease-in-out;
+}
+
+.icons a:hover {
+    color: #70e000;
+    transform: translateY(-5px);   
+}
+
+span {
+    color: #76c893;
+}
+
+@media (max-width: 900px) {
+
+    #activities {
+        height: 50vh;
+        justify-content: space-evenly;
+        padding: 0 0.5rem;
+    }
+
+    #activities .act-box {
+        padding: 2rem 4rem;
+        width: 250px;
+    }
+
+    #activities .act-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    #activities .act-box .details h4 {
+        font-size: 1.2rem;
+    }
+
+    #activities .act-box .details p {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #hero {
+        padding: 2rem 5rem;
+    }
+
+    #activities {
+        flex-direction: column;
+        height: 140vh;
+    }
+
+    #activities .act-box {
+        padding: 0.5rem 4rem;
+        width: 250px;
+    }
+
+    .card {
+        width: 500px;
+        padding: 15px;
+    }
+
+    .details {
+        width: 220px;
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+
+}
